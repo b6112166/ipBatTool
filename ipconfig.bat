@@ -32,7 +32,7 @@ if '%errorlevel%' NEQ '0' (
 
 :init
 
-set /p Ip= enter ur Ip.
+set /p Ip= enter the target ip
 
 
 :Menu
@@ -41,11 +41,10 @@ set /p Ip= enter ur Ip.
 
 
 @echo. ip tool
-@echo. 1. ping ip
-@echo. 2. trace ip
-@echo. 3. change ip
-@echo. 4. display ip
-@echo. 5. get admin 
+@echo. 1. ping target ip
+@echo. 2. trace target ip
+@echo. 3. change target ip
+@echo. 4. display target ip
 @echo. q. quit
 set /p sel=     enter ur selection.
 if /i "%sel%" == "1" Goto Ping
