@@ -1,10 +1,6 @@
 @ECHO OFF&PUSHD %~DP0 &TITLE my bat
 
 mode con cols=45lines=20
-set /p a = Acess admin(y/n)?
-if "%a%" == "y" (
-goto BatchGotAdmin
-)else(goto init)
 
 :: BatchGotAdmin
 :-------------------------------------
@@ -37,7 +33,7 @@ if '%errorlevel%' NEQ '0' (
 :init
 
 set /p Ip= enter ur Ip.
-if "%Ip" == "lol" set Ip=1
+
 
 :Menu
 
@@ -70,7 +66,7 @@ goto menu
 
 :Trace
 
-tracert %Ip% > C:\traced.txt
+tracert %Ip% > %CD%\traced.txt
 goto menu
 
 :Change
