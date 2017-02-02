@@ -1,4 +1,4 @@
-@ECHO OFF&PUSHD %~DP0 &TITLE my bat
+@ECHO OFF&PUSHD %~DP0 &TITLE Ipconfig Tool
 
 mode con cols=45lines=20
 
@@ -32,7 +32,7 @@ if '%errorlevel%' NEQ '0' (
 
 :init
 
-set /p Ip= enter the target ip
+set /p Ip= enter the target ip:
 
 
 :Menu
