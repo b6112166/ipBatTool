@@ -54,7 +54,8 @@ if /i "%sel%" == "4" Goto Display
 if /i "%sel%" == "q" Exit
 
 @ echo.
-echo nope 
+@ echo. Not a valid input
+@ echo.
 goto menu
 
 
@@ -64,9 +65,13 @@ ping %Ip% -t
 goto menu
 
 :Trace
-
+@ echo. 
+@ echo. Tracing
 tracert %Ip% > %CD%\traced.txt
+@ echo. Trace complete
+@ echo.
 goto menu
+
 
 :Change
 set /p Ip=  enter the ip.
@@ -74,7 +79,9 @@ set /p Ip=  enter the ip.
 goto menu
 
 :Display
+@echo.
 echo %Ip%
+@echo.
 goto menu
 
 
